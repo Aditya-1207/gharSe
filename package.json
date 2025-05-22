@@ -1,0 +1,32 @@
+{
+  "name": "gharse",
+  "version": "1.0.0",
+  "description": "Food delivery app using react",
+  "source": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aditya-1207/gharSe.git"
+  },
+  "keywords": [
+    "food-delivery",
+    "react",
+    "jest"
+  ],
+  "author": "Aditya-1207",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aditya-1207/gharSe/issues"
+  },
+  "homepage": "https://github.com/Aditya-1207/gharSe#readme",
+  "devDependencies": {
+    "parcel": "^2.15.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
