@@ -1,0 +1,25 @@
+.header-container {
+    display: flex;
+     justify-content: space-between;     /*Separated the image and ULs */
+     border: 2px solid violet;
+     
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    padding-left: 50px;
+}
+
+.navigation-bar > ul{
+    display: flex;                      /*Makes the commands in single horizontal line*/
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+.navigation-bar>ul>li {
+    padding: 10px;                      /* Added spaces in between lists */
+    margin: 10px;
+    list-style: none;                   /*Removed the list dots*/
+}
