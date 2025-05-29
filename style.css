@@ -23,3 +23,50 @@
     margin: 10px;
     list-style: none;                   /*Removed the list dots*/
 }
+
+h3{
+    margin: 0%;    
+}
+h4{
+    text-align: center;
+}
+.restaurantCard{
+    width: 250px;    
+    background-color: wheat;
+    margin: 2px;
+}
+
+.restaurantCard:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.restaurantImage{
+     width: 200px;
+    height: 200px;
+    padding: 25px;
+    
+}
+
+.restaurantName{
+    text-align: center;
+}
+
+.ratingAndETA {
+    margin: 0;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;     
+}
+
+.ETA{
+    display: flex;
+    justify-content: right;
+}
+
+.restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
