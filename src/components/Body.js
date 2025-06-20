@@ -1,14 +1,28 @@
 import RestaurantCard from "./RestaurantCard";
-import restaurantList from "../../common/mockData";
-import { useState } from "react";
-
+import { useState,useEffect } from "react";
 
 //Body component to have restaurant cards
 
 const Body = () => {
 
-     const [listOfRestaurants, setlistOfRestaurants] = useState(restaurantList);
+     const [listOfRestaurants, setlistOfRestaurants] = useState([]);
 
+     useEffect(()=>{
+        console.log("From useEffect");   
+        liveData();      
+     },[]);
+
+     const liveData = async () => {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.489421252484462&lng=73.79558242857456&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#");
+        
+        const json = await data.json();
+        console.log(json);
+
+        //Optional chaining to confirm existence of chaining
+        setlistOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+     }
+
+    
     return (
         <div className="body">
             <h3>This is the body</h3>
@@ -21,7 +35,7 @@ const Body = () => {
                     // Filter the list and set it to useState function
                     const filteredList = listOfRestaurants.filter(
                         (restaurant) => {
-                            return restaurant.info.avgRating>4.0
+                            return restaurant.info.avgRating>4.5
                         }
                     );
                     setlistOfRestaurants(filteredList);
